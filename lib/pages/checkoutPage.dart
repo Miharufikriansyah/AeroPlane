@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:aeroplan/widgets/addOns.dart';
+import 'package:aeroplan/widgets/confirm.dart';
 
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({super.key});
@@ -482,7 +483,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 Container(
                   margin: EdgeInsets.only(top: 20, bottom: 10),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Confirm(context);
+                    },
                     style: TextButton.styleFrom(
                         fixedSize: Size(380, 50),
                         backgroundColor: Color(0xff4394FB)),
