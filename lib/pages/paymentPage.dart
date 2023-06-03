@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -135,6 +137,248 @@ class _PaymentPageState extends State<PaymentPage> {
               ),
             ]),
           ),
+          Container(
+            decoration: BoxDecoration(
+                border: Border.all(color: Color(0xffDBDCDC)),
+                borderRadius: BorderRadius.circular(10)),
+            margin: EdgeInsets.only(top: 30),
+            width: 380,
+            height: 115,
+            child: Column(
+              children: [
+                Card(
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.only(
+                    //         topLeft: Radius.circular(10),
+                    //         topRight: Radius.circular(10))),
+                    color: Color(0xff7CDBFF),
+                    child: SizedBox(
+                        width: 380,
+                        child: Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Spacer(),
+                              Container(
+                                margin: EdgeInsets.only(left: 35),
+                                child: Column(
+                                  children: [
+                                    // ignore: avoid_unnecessary_containers
+                                    Container(
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            "CGK",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w700),
+                                          ),
+                                          Container(
+                                            width: 15,
+                                            height: 2,
+                                            child: DecoratedBox(
+                                                decoration: BoxDecoration(
+                                                    color: Color(0xff363939))),
+                                          ),
+                                          Text("SIN",
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w700))
+                                        ],
+                                      ),
+                                    ),
+                                    Text("7 April 2023")
+                                  ],
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(
+                                Icons.keyboard_arrow_down,
+                                size: 35,
+                              )
+                            ],
+                          ),
+                        ))),
+                TextButton(
+                    style: TextButton.styleFrom(
+                        fixedSize: Size(380, 50),
+                        backgroundColor: Color(0xffF3F7FB)),
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 5),
+                          child: Text(
+                            "Metode Pembayaran Belum Dipilih",
+                            style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            child: Text(
+                              "Pilih",
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Color(0xff4394FB),
+                                  fontWeight: FontWeight.w600),
+                            ))
+                      ],
+                    )),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 20, top: 20),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Optional",
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Color(0xff797A7B),
+                  fontWeight: FontWeight.w600),
+            ),
+          ),
+          Container(
+            width: 380,
+            padding: EdgeInsets.all(8),
+            margin: EdgeInsets.only(top: 10),
+            decoration: BoxDecoration(
+                color: Color(0xffF3F7FB),
+                border: Border.all(color: Color(0xffDBDCDC)),
+                borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 15),
+                          child: Icon(
+                            Icons.discount_outlined,
+                            size: 30,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Text(
+                            "Voucher",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Color(0xff797A7B),
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )
+                      ],
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Tambah",
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: Color(0xff4394FB),
+                              fontWeight: FontWeight.w600),
+                        ))
+                  ],
+                ),
+                Divider(
+                  height: 2,
+                  thickness: 2,
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 15, top: 5),
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Anda mempunyai 1 voucher",
+                    style: TextStyle(fontSize: 15, color: Color(0xff797A7B)),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            width: 380,
+            padding: EdgeInsets.all(8),
+            margin: EdgeInsets.only(top: 40, bottom: 20),
+            decoration: BoxDecoration(
+                color: Color(0xffF3F7FB),
+                border: Border.all(color: Color(0xffDBDCDC)),
+                borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      child: Text(
+                        "Total Price",
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xff797A7B),
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(right: 5),
+                          child: Text(
+                            "Rp 800.200",
+                            style: TextStyle(
+                                color: Color(0xff363939),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 30,
+                          color: Color(0xff4394FB),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                Container(
+                    margin: EdgeInsets.only(bottom: 10, top: 10),
+                    width: 500,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: null,
+                      child: Text(
+                        "Bayar",
+                        style: TextStyle(
+                            color: Color(0xffEAEAEA),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    )),
+              ],
+            ),
+          ),
+          Column(
+            children: [
+              Text("Dengan melanjutkan Pembayaran, Anda menyetujui"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Syarat & Ketentuan"),
+                  ),
+                  Text("AeroPlane")
+                ],
+              ),
+            ],
+          )
         ]),
       )
     ])));
