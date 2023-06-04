@@ -23,7 +23,7 @@ class _TiketState extends State<Tiket> {
                   style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
                 ),
                 Icon(
-                  Icons.assignment,
+                  Icons.assignment_outlined,
                   size: 50,
                   color: Color(0xffB7C2FF),
                 )

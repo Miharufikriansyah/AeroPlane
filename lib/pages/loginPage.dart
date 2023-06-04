@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.of(context)
                               .push(MaterialPageRoute(builder: (context) {
-                            return MainPage(title: '');
+                            return MainPage();
                           }));
                         },
                         style: TextButton.styleFrom(

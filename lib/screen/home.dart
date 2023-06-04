@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                   height: 165,
                   width: 1000,
                   child: Image(
-                    image: AssetImage('assets/images/backhome.png'),
+                    image: AssetImage('assets/images/bg-data.png'),
                     fit: BoxFit.fill,
                   )),
               Column(
@@ -55,12 +55,13 @@ class _HomePageState extends State<HomePage> {
                                   "Halo Alex!",
                                   style: TextStyle(
                                       fontSize: 25,
-                                      fontWeight: FontWeight.w600),
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xffF6F6F6)),
                                 ),
                                 const Text(
                                   "Kamu mau liburan kemana?",
                                   style: TextStyle(
-                                      fontSize: 18, color: Color(0xff363939)),
+                                      fontSize: 18, color: Color(0xffEAEAEA)),
                                 )
                               ]),
                         )

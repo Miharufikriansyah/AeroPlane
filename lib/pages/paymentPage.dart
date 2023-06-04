@@ -1,9 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:aeroplan/pages/methodsPage.dart';
+import 'package:aeroplan/pages/successPage.dart';
 
 class PaymentPage extends StatefulWidget {
-  const PaymentPage({super.key});
+  bool pilih;
+  String method, gambar;
+  PaymentPage(
+      {super.key,
+      this.pilih = false,
+      this.method = "",
+      this.gambar = "visa.png"});
 
   @override
   State<PaymentPage> createState() => _PaymentPageState();
@@ -204,20 +212,45 @@ class _PaymentPageState extends State<PaymentPage> {
                     style: TextButton.styleFrom(
                         fixedSize: Size(380, 50),
                         backgroundColor: Color(0xffF3F7FB)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return MethodsPage();
+                      }));
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(left: 5),
-                          child: Text(
-                            "Metode Pembayaran Belum Dipilih",
-                            style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w700),
-                          ),
-                        ),
+                            margin: EdgeInsets.only(left: 5),
+                            child: !widget.pilih
+                                ? Text(
+                                    "Metode Pembayaran Belum Dipilih",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700),
+                                  )
+                                : Container(
+                                    margin: EdgeInsets.only(left: 5),
+                                    child: Row(
+                                      children: [
+                                        Image(
+                                            image: AssetImage('assets/images/' +
+                                                widget.gambar)),
+                                        Container(
+                                          margin: EdgeInsets.only(left: 15),
+                                          child: Text(
+                                            "Bayar melalui " + widget.method,
+                                            style: TextStyle(
+                                                fontSize: 17,
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.w700),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )),
                         Container(
                             margin: EdgeInsets.only(right: 10),
                             child: Text(
@@ -352,11 +385,20 @@ class _PaymentPageState extends State<PaymentPage> {
                     width: 500,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: null,
+                      onPressed: !widget.pilih
+                          ? null
+                          : () {
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (context) {
+                                return SuccessPage();
+                              }));
+                            },
                       child: Text(
                         "Bayar",
                         style: TextStyle(
-                            color: Color(0xffEAEAEA),
+                            color: !widget.pilih
+                                ? Color(0xffEAEAEA)
+                                : Color(0xffF6F6F6),
                             fontSize: 18,
                             fontWeight: FontWeight.w600),
                       ),
