@@ -5,7 +5,16 @@ import 'package:aeroplan/widgets/addOns.dart';
 import 'package:aeroplan/widgets/confirm.dart';
 
 class CheckoutPage extends StatefulWidget {
-  const CheckoutPage({super.key});
+  String asal, tujuan, berangkat, tiba, kota1, kota2, harga;
+  CheckoutPage(
+      {super.key,
+      required this.asal,
+      required this.tujuan,
+      required this.tiba,
+      required this.berangkat,
+      required this.kota1,
+      required this.kota2,
+      required this.harga});
 
   @override
   State<CheckoutPage> createState() => _CheckoutPageState();
@@ -170,21 +179,22 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                 Container(
                                     padding: EdgeInsets.all(15),
                                     margin: EdgeInsets.only(bottom: 10),
-                                    child: Text("Jakarta (CGK)",
+                                    child: Text(
+                                        widget.kota1 + " (" + widget.asal + ")",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w500))),
                                 Container(
                                     margin: EdgeInsets.only(bottom: 10),
                                     child: Text(
-                                      "7 April,",
+                                      "",
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500),
                                     )),
                                 Container(
                                   child: Text(
-                                    "18 : 20",
+                                    widget.berangkat,
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
@@ -220,21 +230,25 @@ class _CheckoutPageState extends State<CheckoutPage> {
                                 Container(
                                     padding: EdgeInsets.all(15),
                                     margin: EdgeInsets.only(bottom: 10),
-                                    child: Text("Singapore (SIN)",
+                                    child: Text(
+                                        widget.kota2 +
+                                            " (" +
+                                            widget.tujuan +
+                                            ")",
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w500))),
                                 Container(
                                     margin: EdgeInsets.only(bottom: 10),
                                     child: Text(
-                                      "7 April,",
+                                      "",
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500),
                                     )),
                                 Container(
                                   child: Text(
-                                    "21 : 15",
+                                    widget.tiba,
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w400),
@@ -444,7 +458,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                           ),
                           Container(
                             margin: EdgeInsets.only(right: 10),
-                            child: Text("Rp. 709.435",
+                            child: Text("Rp. " + widget.harga,
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.w700)),
                           )
@@ -470,7 +484,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                             margin:
                                 EdgeInsets.only(top: 5, right: 15, bottom: 10),
                             child: Text(
-                              "Rp. 709.435",
+                              "Rp. " + widget.harga,
                               style: TextStyle(
                                   color: Color(0xff8E9090), fontSize: 15),
                             ),

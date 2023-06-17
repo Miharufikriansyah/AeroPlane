@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "556179635448",
+    "project_id": "aeroplane-58511",
+    "storage_bucket": "aeroplane-58511.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556179635448:android:87d445305a1e715e8e0f0d",
+        "android_client_info": {
+          "package_name": "AeroPlane.MDERN"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556179635448-cnmro67ahd4ep0tbsddhucfslu1j017u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD7ZKK9glGp09DMAIHLovVbBgfOAbJi7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556179635448-cnmro67ahd4ep0tbsddhucfslu1j017u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "556179635448-fnrn5ltrm0vfc0vo4d38o2e4dq6gbtab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aeroplan"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556179635448:android:5ff192840939921f8e0f0d",
+        "android_client_info": {
+          "package_name": "com.example.aeroplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556179635448-cnmro67ahd4ep0tbsddhucfslu1j017u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD7ZKK9glGp09DMAIHLovVbBgfOAbJi7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556179635448-cnmro67ahd4ep0tbsddhucfslu1j017u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "556179635448-fnrn5ltrm0vfc0vo4d38o2e4dq6gbtab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aeroplan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -54,7 +54,7 @@ class _TiketState extends State<Tiket> {
                           Container(
                               margin: EdgeInsets.only(bottom: 10),
                               child: Text(
-                                "7 April,",
+                                "21 Juni,",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w500),
                               )),
@@ -95,7 +95,7 @@ class _TiketState extends State<Tiket> {
                           Container(
                               margin: EdgeInsets.only(bottom: 10),
                               child: Text(
-                                "7 April,",
+                                "21 Juni,",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w500),
                               )),
@@ -124,7 +124,7 @@ class _TiketState extends State<Tiket> {
                             children: [
                               CircleAvatar(
                                 radius: 15,
-                                backgroundColor: Colors.grey,
+                                backgroundColor: Colors.blueGrey,
                               ),
                               Container(
                                 margin: EdgeInsets.only(left: 12),

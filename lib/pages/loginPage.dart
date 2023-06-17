@@ -54,9 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     InputField(
-                      inputLabel: "yourname@email.com",
-                      prefIcon: Icons.email,
-                    )
+                        inputLabel: "yourname@email.com", prefIcon: Icons.email)
                   ],
                 ),
               ),

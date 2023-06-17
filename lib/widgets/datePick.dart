@@ -3,7 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 class DatePick extends StatefulWidget {
-  const DatePick({super.key});
+  String tgl = "";
+  DatePick({super.key});
 
   @override
   State<DatePick> createState() => DatePickState();
@@ -17,7 +18,7 @@ class DatePickState extends State<DatePick> {
   @override
   void initState() {
     super.initState();
-    initializeDateFormatting('id');
+    // initializeDateFormatting('id');
   }
 
   @override
@@ -48,14 +49,14 @@ class DatePickState extends State<DatePick> {
           onTap: () async {
             DateTime? pickeddate = await showDatePicker(
                 context: context,
-                locale: Locale('id', 'ID'),
+                // locale: Locale('id', 'ID'),
                 initialDate: DateTime.now(),
                 firstDate: DateTime(1990),
                 lastDate: DateTime(2100));
 
             if (pickeddate != null) {
               setState(() {
-                _date.text = DateFormat.yMMMMEEEEd('id').format(pickeddate);
+                _date.text = DateFormat.yMMMMEEEEd().format(pickeddate);
               });
             }
           },

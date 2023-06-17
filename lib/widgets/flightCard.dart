@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:aeroplan/pages/checkoutPage.dart';
 
 class FlightCard extends StatefulWidget {
-  String airline, price, depart, arrive, time1, time2, duration;
+  String airline, price, depart, arrive, time1, time2, duration, kota1, kota2;
 
   FlightCard(
       {super.key,
@@ -12,7 +12,9 @@ class FlightCard extends StatefulWidget {
       required this.arrive,
       required this.time1,
       required this.time2,
-      required this.duration});
+      required this.duration,
+      required this.kota1,
+      required this.kota2});
 
   @override
   State<FlightCard> createState() => _FlightCardState();
@@ -28,7 +30,15 @@ class _FlightCardState extends State<FlightCard> {
         child: InkWell(
           onTap: () => {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return CheckoutPage();
+              return CheckoutPage(
+                asal: widget.depart,
+                tujuan: widget.arrive,
+                berangkat: widget.time1,
+                tiba: widget.time2,
+                kota1: widget.kota1,
+                kota2: widget.kota2,
+                harga: widget.price,
+              );
             }))
           },
           child: SizedBox(

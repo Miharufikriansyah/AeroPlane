@@ -14,6 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // TextEditingController _departController = TextEditingController();
+  // TextEditingController _arriveController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,8 +88,9 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(fontSize: 20),
                               )),
                           InputField(
-                              inputLabel: 'Keberangkatan',
-                              prefIcon: Icons.flight_takeoff)
+                            inputLabel: 'Keberangkatan',
+                            prefIcon: Icons.flight_takeoff,
+                          )
                         ],
                       ),
                     ),
@@ -120,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                               "Tanggal Berangkat",
                               style: TextStyle(fontSize: 20),
                             )),
-                        const DatePick()
+                        DatePick()
                       ],
                     ),
                   ),
@@ -169,7 +172,9 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         Navigator.of(context)
                             .push(MaterialPageRoute(builder: (context) {
-                          return FlightPage();
+                          return FlightPage(
+                            dates: "21 Juni 2023",
+                          );
                         }));
                       },
                       style: TextButton.styleFrom(

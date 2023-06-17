@@ -5,6 +5,7 @@ class InputField extends StatelessWidget {
   IconData? prefIcon;
   IconData? suffIcon;
   bool pass;
+  // TextEditingController inputControl;
 
   InputField(
       {super.key,
