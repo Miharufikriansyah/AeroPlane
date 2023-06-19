@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:aeroplan/widgets/addOns.dart';
 import 'package:aeroplan/widgets/confirm.dart';
+import 'package:aeroplan/pages/airportMaps.dart';
 
 class CheckoutPage extends StatefulWidget {
   String asal, tujuan, berangkat, tiba, kota1, kota2, harga;
@@ -41,25 +42,42 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   margin: EdgeInsets.only(top: 10),
                   child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          margin: EdgeInsets.only(left: 10),
-                          child: IconButton(
-                            onPressed: () => {Navigator.pop(context)},
-                            icon: Icon(
-                              Icons.arrow_back,
-                              size: 38,
-                              color: Color(0xffF6F6F6),
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 10),
+                              child: IconButton(
+                                onPressed: () => {Navigator.pop(context)},
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  size: 38,
+                                  color: Color(0xffF6F6F6),
+                                ),
+                              ),
                             ),
-                          ),
+                            Container(
+                              margin: EdgeInsets.only(left: 10),
+                              child: Text(
+                                "Isi Data",
+                                style: TextStyle(
+                                    fontSize: 25, color: Color(0xffF6F6F6)),
+                              ),
+                            ),
+                          ],
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(
-                            "Isi Data",
-                            style: TextStyle(
-                                fontSize: 25, color: Color(0xffF6F6F6)),
-                          ),
+                          margin: EdgeInsets.only(right: 10),
+                          child: IconButton(
+                              onPressed: () {
+                                Navigator.of(context)
+                                    .push(MaterialPageRoute(builder: (context) {
+                                  return MapSample();
+                                }));
+                              },
+                              icon: Icon(Icons.map,
+                                  size: 38, color: Color(0xffF6F6F6))),
                         )
                       ]),
                 ),

@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -7,6 +10,21 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  File? image;
+  final ImagePicker picker = ImagePicker();
+
+  Future getImage() async {
+    final XFile? photo = await picker.pickImage(source: ImageSource.camera);
+    setState(() {
+      image = File(photo!.path);
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +45,20 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Row(
                       children: [
-                        CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Color(0xffD9D9D9),
-                          child: Text(
-                            "A",
-                            style: TextStyle(fontSize: 20, color: Colors.black),
+                        InkWell(
+                          onTap: () async {
+                            await getImage();
+                          },
+                          child: CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Color(0xffD9D9D9),
+                            child: image != null
+                                ? Image.file(image!)
+                                : Text(
+                                    "A",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.black),
+                                  ),
                           ),
                         ),
                         Container(
